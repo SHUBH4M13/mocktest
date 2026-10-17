@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #1a1b3a;
+  --color-ink-soft: #5b5f82;
+  --color-paper: #f1f3fb;
+  --color-card: #ffffff;
+  --color-line: #dfe2f2;
+
+  --color-brand: #5b4bff;
+  --color-brand-deep: #3f31d6;
+  --color-brand-tint: #ecebff;
+
+  --color-right: #0f9d7a;
+  --color-right-ink: #0a6b52;
+  --color-right-tint: #e1f6ef;
+
+  --color-wrong: #e0475b;
+  --color-wrong-ink: #a42a3c;
+  --color-wrong-tint: #fdebee;
+
+  --color-amber: #f5a524;
+  --color-amber-tint: #fff4dc;
+  --color-amber-ink: #8a5a00;
+
+  --shadow-card: 0 1px 0 rgb(26 27 58 / 0.04), 0 18px 40px -22px rgb(63 49 214 / 0.35);
+}
+
+html {
+  background: var(--color-paper);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background:
+    radial-gradient(900px 360px at 50% -120px, rgb(91 75 255 / 0.16), transparent 70%),
+    var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
